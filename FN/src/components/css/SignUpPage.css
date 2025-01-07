@@ -1,0 +1,58 @@
+.signup-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* 세로 중앙 정렬 */
+  align-items: center;      /* 가로 중앙 정렬 */
+  min-height: 100vh;        /* 화면 높이 꽉 차도록 설정 */
+  flex-grow: 1; 
+  overflow-y: auto;  
+}
+
+.signup-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 50vh;  /* 폼의 최대 너비 설정 */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 12px;
+  background-color: #0B72D2;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cruvix-text2{
+  color: #0B72D2;
+}

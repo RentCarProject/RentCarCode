@@ -1,0 +1,77 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.0'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.project'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//implementation 'org.springframework.boot:spring-boot-starter'
+	//testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// Web 의존성
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// Test 의존성
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// JSP 관련 의존성 (필요시)
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	implementation 'jakarta.servlet:jakarta.servlet-api'
+	implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
+	implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
+
+	// Validation 의존성
+	implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
+	implementation 'jakarta.validation:jakarta.validation-api:3.1.0'
+
+	// JDBC 의존성 (MySQL Connector)
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	// JPA 의존성 (MySQL을 JPA로 사용할 경우)
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	//SECURITY
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	//JWT
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.2'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.2'
+
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
+	// JSoup 의존성 추가
+	implementation group: 'org.jsoup', name: 'jsoup', version: '1.18.1'
+
+	// Selenium WebDriver 의존성 추가
+	// Selenium Java
+	implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.27.0'	// WebDriverManager for easier WebDriver management
+	implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+	options.compilerArgs << "-parameters"
+}

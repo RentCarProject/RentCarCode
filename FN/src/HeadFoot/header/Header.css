@@ -1,0 +1,23 @@
+header {
+    width: 100%;                  /* 전체 너비 설정 */
+    padding: 10px 0;              /* 위/아래 패딩 설정 */
+    background-color: white;    /* 헤더 배경색 설정 (예: 어두운 색) */
+    display: flex;                /* flexbox로 배치 */
+    justify-content: center;      /* 로고를 수평 중앙 정렬 */
+    align-items: center;          /* 로고를 수직 중앙 정렬 */
+  }
+  
+  /* header 내부 컨테이너 스타일 */
+  .header-container {
+    display: flex;                /* flexbox로 배치 */
+    justify-content: center;      /* 수평 중앙 정렬 */
+    align-items: center;          /* 수직 중앙 정렬 */
+    max-width: 1200px;            /* 최대 너비 설정 (원하는 크기에 맞게 조정) */
+    width: 100%;                  /* 너비 100%로 설정 */
+  }
+  
+  /* 로고 이미지 스타일 */
+  .logo {
+    max-width: 250px;             
+    height: 200px;                 
+  }
