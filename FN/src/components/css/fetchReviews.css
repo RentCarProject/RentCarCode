@@ -1,0 +1,123 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);  /* 배경 어둡게 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    transition: opacity 0.3s ease;
+}
+
+.review-modal {
+    background-color: #fff;
+    width: 550px;
+    max-width: 95%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.review-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 20px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.review-modal-header .close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s ease;
+}
+
+.review-modal-header .close-button:hover {
+    color: #555;
+}
+
+.review-modal-content {
+    padding: 25px;
+    max-height: 60vh;  /* 내용이 길어질 경우 스크롤 */
+    overflow-y: auto;
+}
+
+.review-modal p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+.review-modal .rating {
+    font-size: 20px;
+    color: #f5a623;
+    margin: 15px 0;
+}
+
+.review-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+    padding: 20px 25px;
+}
+
+.review-modal-footer button {
+    margin-left: 10px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.review-modal-footer .update-button {
+    background-color: #ffc107;  /* 수정 버튼 노란색 */
+    color: #333;
+}
+
+.review-modal-footer .update-button:hover {
+    background-color: #e0a800;
+}
+
+.review-modal-footer .delete-button {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+.review-modal-footer .delete-button:hover {
+    background-color: #e63e3e;
+}
+
+.review-modal-footer .close-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.review-modal-footer .close-button:hover {
+    background-color: #0056b3;
+}
+
+/* 애니메이션 - 위에서 아래로 등장 */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

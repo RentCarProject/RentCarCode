@@ -1,0 +1,135 @@
+/* Modal Background */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75); /* 더 어둡게 */
+  z-index: 1050;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 50px 40px; /* 여백 더 넓게 */
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  width: 550px;
+  max-width: 90%;
+  animation: slideUp 0.4s ease-out;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Modal Title */
+.modal-content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 18px;
+  background-color: #f3f3f3;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+input:focus {
+  border-color: #4C98FF;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(76, 152, 255, 0.4);
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaa;
+  font-size: 16px;
+}
+
+/* Buttons */
+.modal-button {
+  background-color: #4C98FF;
+  color: white;
+  padding: 12px 25px;  /* 여백을 줄임 */
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;  /* 폰트 크기 줄임 */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 35%;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.modal-button:hover {
+  background-color: #357AE8;
+  transform: translateY(-3px); /* 호버 시 버튼 위로 살짝 이동 */
+  box-shadow: 0 10px 20px rgba(76, 152, 255, 0.3);
+}
+
+.modal-button:active {
+  background-color: #2B64B5;
+  transform: translateY(1px); /* 클릭 시 다시 원위치 */
+  box-shadow: none;
+}
+
+/* Actions Container */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+/* Address Modal Overlay */
+.address-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* Address Modal Content */
+.address-modal-content {
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  width: 480px;
+  max-width: 90%;
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Animation for Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

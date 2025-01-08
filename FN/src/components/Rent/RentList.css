@@ -1,0 +1,72 @@
+/* 모달 오버레이 - 배경 흐림 효과 */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 모달 본문 스타일 */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 모달 내부 제목 */
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* 모달 내부 버튼 그룹 */
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* 모달 내부 버튼 크기와 색상 */
+.modal-extend-button, .modal-close-button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+}
+
+/* 확인 버튼 색상 */
+.modal-extend-button {
+    background-color: #4C98FF;
+    color: white;
+}
+
+/* 취소 버튼 색상 */
+.modal-close-button {
+    background-color: #B0B0B0;
+    color: white;
+}
+
+/* hover 및 active 효과 */
+.modal-extend-button:hover {
+    background-color: #357AE8;
+}
+
+.modal-close-button:hover {
+    background-color: #909090;
+}
+
+.modal-extend-button:active,
+.modal-close-button:active {
+    opacity: 0.85;
+}

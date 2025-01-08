@@ -1,0 +1,80 @@
+.signup-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.signup-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 50vh;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* 아이디 입력칸 스타일 */
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;  /* 전체 너비 차지 */
+}
+
+.input-field {
+  flex: 1;  /* 아이디 입력칸이 버튼과 동일한 너비를 가지도록 설정 */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.id-check-btn {
+  padding: 10px 20px;
+  background-color: #0B72D2;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;  /* 입력칸과 버튼 사이의 간격을 설정 */
+  margin-top: -20px;
+}
+
+.id-check-btn:hover {
+  background-color: #075cb2;  /* 호버 시 어두운 파란색 */
+}
+
+button {
+  padding: 12px;
+  background-color: #0B72D2;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cruvix-text2 {
+  color: #0B72D2;
+}

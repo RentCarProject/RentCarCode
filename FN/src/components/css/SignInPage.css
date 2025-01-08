@@ -1,0 +1,127 @@
+/* 전체 페이지 스타일 */
+.sign-in-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffffff, #445a72); /* 배경에 그라데이션 추가 */
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 로그인 정보 영역 */
+.signIn-info {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.signIn-info h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* 로그인 폼 스타일 */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;  /* 폼 최대 너비 설정 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-signIn {
+    width: 100%;
+    
+}
+
+/* form-group 스타일 */
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;  /* form-group의 너비를 100%로 설정 */
+    max-width: 400px;  /* 최대 너비 설정으로 너무 커지지 않도록 조절 */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #0B72D2;
+}
+
+/* 버튼 그룹 스타일 */
+.button-group {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px;  
+    margin-top: 20px;
+    width: 100%;  
+
+}
+
+/* 로그인 버튼과 회원가입 버튼 공통 스타일 */
+.submit-button, .sign-up-button {
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%; /* 두 버튼의 너비를 동일하게 설정 */
+}
+
+/* 로그인 버튼 스타일 */
+.submit-button {
+    background-color: transparent;
+    color: #0B72D2;
+    border: 1px solid #0B72D2;
+}
+
+.submit-button:hover {
+    background-color: #0B72D2;
+    color: white;
+}
+
+/* 회원가입 버튼 스타일 */
+.sign-up-button {
+    background-color: transparent;
+    color: #0B72D2;
+    border: 1px solid #0B72D2;
+}
+
+.sign-up-button:hover {
+    background-color: #0B72D2;
+    color: white;
+}
+
+/* 하단 텍스트 */
+.signIn-text {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cruvix-text {
+    color: #0B72D2;
+    font-weight: bold;
+}
